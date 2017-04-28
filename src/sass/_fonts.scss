@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,900);
+
+.font-primary-light{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.font-primary{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+.font-primary-bold{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+.font-primary-ultra-bold{
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+} 
+
+h1{
+  @extend .font-primary-ultra-bold;
+}
+h2{
+  @extend .font-primary-light;
+}
+h3, h4, h5, h6{
+  @extend .font-primary;
+}
+
+p, a, small, li{
+  @extend .font-primary;
+}
+
+b, strong{
+  @extend .font-primary-bold;
+}

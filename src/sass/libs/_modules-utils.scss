@@ -1,0 +1,161 @@
+@import "media-querys";
+@import "compass/css3/";
+@import "compass/utilities/general/clearfix";
+
+*:focus {outline:none !important; @include box-shadow(none !important); }
+*::-moz-focus-inner {border:0 !important; @include box-shadow(none !important); }
+
+.overflow-hidden{
+  overflow: hidden; 
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+} 
+
+.center-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto; 
+} 
+
+.block{
+  display: block;
+  float: none;
+}
+
+.block-i{
+  font-size: 0;
+  & > div{
+    display: inline-block;
+    font-size: 16px;
+  }
+  & > li{
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.pr{
+  position: relative;
+}
+
+.pa{
+  position: absolute;
+}
+
+.reset{
+  padding: 0px;
+  margin: 0px;
+}
+.fh{
+  height: 100%;
+}
+ 
+.table{
+  display: table;
+  .cell{
+    display: table-cell;
+  }
+}
+.v-middle{
+  vertical-align: middle;
+}
+.v-top{
+  vertical-align: top;
+}
+.v-bottom{
+  vertical-align: bottom;
+} 
+
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  &.cover{
+    background-size: cover;
+  }
+  
+}
+.layer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  &.white{
+      background: #fff;
+  } 
+  &.black{
+      background: #000; 
+  }
+  @for $i from 0 through 10 {
+    &.op-#{$i*10}{ opacity: #{$i/10}; }
+  }
+}
+
+.spinner-animate{
+  @include animation(spinner-animate linear 1s infinite );
+}
+
+@include keyframes(spinner-animate){
+  from{
+    @include transform(rotate(0deg)); 
+  }
+  to{
+    @include transform(rotate(360deg));  
+  }
+}
+
+div[class*="space-"]{
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+}
+
+@for $i from 1 through 9 {
+ .space-#{$i*10}{ height: #{$i*10}; }
+}
+
+@include respond-to(lg){
+  @for $i from 1 through 9 {
+   .space-lg-#{$i*10}{ height: #{$i*10}; }
+  } 
+} 
+@include respond-to(md){
+  @for $i from 1 through 9 {
+   .space-md-#{$i*10}{ height: #{$i*10}; }
+  } 
+} 
+@include respond-to(sm){
+  @for $i from 1 through 9 {
+   .space-sm-#{$i*10}{ height: #{$i*10}; }
+  } 
+} 
+@include respond-to(mobile){
+  @for $i from 1 through 9 {
+    .space-mobile-#{$i*10}{ height: #{$i*10}; }
+  } 
+}
+@include respond-to(xs-min){
+  @for $i from 1 through 9 {
+   .space-xs-#{$i*10}{ height: #{$i*10}; }
+  } 
+}

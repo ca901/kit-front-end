@@ -1,0 +1,16 @@
+{
+  "name": "front-end-started-kit",
+  "version": "1.0.0",
+  "description": "Started Kit to Front-end Development",
+  "authors": [
+    "Víctor Araya Jiménez"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "jquery-ui": "~1.11.4",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}
